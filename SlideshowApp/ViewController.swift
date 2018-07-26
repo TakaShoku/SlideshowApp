@@ -19,7 +19,12 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    @IBAction func onTapImage(_ sender: Any) {
+        
+//        セグエを使用して画面を遷移
+        performSegue(withIdentifier: "result", sender: nil)
+    }
+    
 
 }
 
