@@ -83,7 +83,11 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem id="UI6-QS-W6T">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="M3G-JM-8ne"/>
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="M3G-JM-8ne">
+                                            <connections>
+                                                <segue destination="l15-LF-poE" kind="unwind" unwindAction="unwind:" id="R9B-l9-ljJ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -107,6 +111,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ccy-Xu-MkJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="l15-LF-poE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="919" y="32"/>
         </scene>

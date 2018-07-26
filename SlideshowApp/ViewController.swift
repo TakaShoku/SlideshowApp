@@ -25,6 +25,9 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "result", sender: nil)
     }
     
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
+    
 
 }
 
