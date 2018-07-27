@@ -120,6 +120,14 @@ class ViewController: UIViewController {
         
 //        セグエを使用して画面を遷移
         performSegue(withIdentifier: "SecondViewController", sender: nil)
+        
+        if self.timer != nil {
+            self.timer.invalidate()   // 現在のタイマーを破棄する
+            self.timer = nil          // startTimer() の timer == nil で判断するために、 timer = nil としておく
+            button3.setTitle("再生", for: UIControlState())
+            button1.isEnabled = true
+            button2.isEnabled = true
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -127,6 +135,10 @@ class ViewController: UIViewController {
             let secondViewController:SecondViewController = segue.destination as! SecondViewController
             
             secondViewController.picture = imageView.image
+            
+            button3.setTitle("再生", for: UIControlState())
+            button1.isEnabled = true
+            button2.isEnabled = true
         }
     }
     
