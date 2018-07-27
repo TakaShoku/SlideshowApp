@@ -10,10 +10,16 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet var imageView2: UIImageView!
+    
+    var picture: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        imageView2.image = picture
     }
 
     override func didReceiveMemoryWarning() {

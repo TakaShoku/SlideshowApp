@@ -31,14 +31,23 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QzI-ME-Vni">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="60"/>
                                         <state key="normal" title="進む"/>
+                                        <connections>
+                                            <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1l4-eM-ha4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZ9-8X-2Pl">
                                         <rect key="frame" x="125" y="0.0" width="125" height="60"/>
                                         <state key="normal" title="戻る"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NaO-K6-Fyy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9QR-mC-p70">
                                         <rect key="frame" x="250" y="0.0" width="125" height="60"/>
                                         <state key="normal" title="再生/停止"/>
+                                        <connections>
+                                            <action selector="palyAndSotpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b2H-DF-IgX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -59,7 +68,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="q01-Wh-zbr" kind="show" identifier="result" id="gc3-Ov-EJa"/>
+                        <outlet property="button1" destination="QzI-ME-Vni" id="3lh-2i-a4a"/>
+                        <outlet property="button2" destination="UZ9-8X-2Pl" id="ucc-H7-JSx"/>
+                        <outlet property="button3" destination="9QR-mC-p70" id="BH0-st-Wx0"/>
+                        <outlet property="imageView" destination="VUL-oy-Ka8" id="PvZ-w6-ilM"/>
+                        <segue destination="q01-Wh-zbr" kind="show" identifier="SecondViewController" id="x1V-Bx-d8d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -91,24 +104,27 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c28-V2-kHh">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L3B-Fb-6I4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="c28-V2-kHh" firstAttribute="trailing" secondItem="eZI-7E-aws" secondAttribute="trailing" id="4UD-zZ-3Ez"/>
+                            <constraint firstItem="eZI-7E-aws" firstAttribute="trailing" secondItem="L3B-Fb-6I4" secondAttribute="trailing" id="Iiy-sq-zd8"/>
+                            <constraint firstItem="eZI-7E-aws" firstAttribute="bottom" secondItem="L3B-Fb-6I4" secondAttribute="bottom" id="Nn6-wj-wDV"/>
+                            <constraint firstItem="L3B-Fb-6I4" firstAttribute="leading" secondItem="eZI-7E-aws" secondAttribute="leading" id="SfC-op-MRi"/>
                             <constraint firstItem="B53-tv-Gbb" firstAttribute="top" secondItem="eZI-7E-aws" secondAttribute="top" id="TmM-cJ-ViY"/>
+                            <constraint firstItem="L3B-Fb-6I4" firstAttribute="top" secondItem="B53-tv-Gbb" secondAttribute="bottom" id="aQ1-gO-P1q"/>
                             <constraint firstItem="B53-tv-Gbb" firstAttribute="leading" secondItem="eZI-7E-aws" secondAttribute="leading" id="c5Y-xK-kHl"/>
-                            <constraint firstAttribute="bottom" secondItem="c28-V2-kHh" secondAttribute="bottom" id="f41-kr-I2L"/>
-                            <constraint firstItem="c28-V2-kHh" firstAttribute="leading" secondItem="eZI-7E-aws" secondAttribute="leading" id="hc7-tq-Wfv"/>
-                            <constraint firstItem="c28-V2-kHh" firstAttribute="top" secondItem="B53-tv-Gbb" secondAttribute="bottom" id="kxZ-CA-qsA"/>
                             <constraint firstItem="B53-tv-Gbb" firstAttribute="trailing" secondItem="eZI-7E-aws" secondAttribute="trailing" id="uEh-1m-QnV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eZI-7E-aws"/>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView2" destination="L3B-Fb-6I4" id="H8Y-C5-rJ0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ccy-Xu-MkJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="l15-LF-poE" userLabel="Exit" sceneMemberID="exit"/>
